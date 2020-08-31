@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css';
+import AppLayout from '../components/AppLayout';
 import Navbar from '../components/Navbar';
 
 export default function Home() {
@@ -11,7 +12,10 @@ export default function Home() {
         <script src="../js/bootstrap.js"/>
       </Head>
 
-      <Navbar/>
+        <Navbar/>
+        <AppLayout>
+          <h1>MOVENU</h1>
+        </AppLayout>
 
       <footer className={styles.footer}>
         <a
