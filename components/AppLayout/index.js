@@ -1,17 +1,17 @@
-import {fonts, colors, breakpoints} from '../../styles/themes.js';
-import {addOpacityToColor} from '../../styles/utils';
+import { fonts, colors, breakpoints } from '../../styles/themes.js'
+import { addOpacityToColor } from '../../styles/utils'
 
-//utilidad para cambiar la opacidad del background que se puede utilizar para otros colores (titulos, texto, fondos, etc)
+// utilidad para cambiar la opacidad del background que se puede utilizar para otros colores (titulos, texto, fondos, etc)
 const backgroundColor = addOpacityToColor(colors.primary, 0.3)
-const AppLayout = ({children}) => {
-    return (
-        <>
-            <div>
-                <main>
-                    {children}
-                </main>
-            </div>
-            <style jsx>{`
+const AppLayout = ({ children }) => {
+  return (
+    <>
+      <div>
+        <main>
+          {children}
+        </main>
+      </div>
+      <style jsx>{`
             div{
                 display:grid;
                 height: 100vh;
@@ -33,8 +33,8 @@ const AppLayout = ({children}) => {
             }
             `}
 
-            </style>
-            <style jsx global>{`
+      </style>
+      <style jsx global>{`
                 html,
                 body{
                     background-image:
@@ -48,9 +48,9 @@ const AppLayout = ({children}) => {
                 }
             `}
 
-            </style>
-        </>
-    );
-}    
+      </style>
+    </>
+  )
+}
 
-export default AppLayout;
+export default AppLayout

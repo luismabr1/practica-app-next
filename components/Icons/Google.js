@@ -1,6 +1,6 @@
-import * as React from "react"
+import * as React from 'react'
 
-function Google(props) {
+function Google (props) {
   return (
     <svg viewBox="0 0 512 512" {...props}>
       <path
@@ -23,4 +23,4 @@ function Google(props) {
   )
 }
 
-export default Google;
+export default Google

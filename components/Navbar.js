@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 /* import logo from '../public/LOGO-MOVENU-BLANCO.png'; */
 
 const Navbar = () => {
-    return (
-      <div className="Navbar">
-        <div className="container-fluid">
+  return (
+    <div className="Navbar">
+      <div className="container-fluid">
         <div className="Navbar__brand">
           <Link href="/"><a className="Navbar__brand">
             {/* <img className="Navbar__brand-logo" src={logo} alt="Logo" /> */}
@@ -14,27 +14,25 @@ const Navbar = () => {
           </a></Link>
 
           <Link href="/">
-              <a className="font-weight-light Navbar__items" href="/unicameral">
+            <a className="font-weight-light Navbar__items" href="/unicameral">
                 Crisis Unicameral
-              </a>
-          </Link>  
+            </a>
+          </Link>
           <Link href="/">
-              <a className="font-weight-light Navbar__items"  href="/bicameral">
+            <a className="font-weight-light Navbar__items" href="/bicameral">
                 Crisis Bicameral
-              </a>
-          </Link>  
+            </a>
+          </Link>
           <Link href="/" >
-              <a className="font-weight-light Navbar__items"  href="/security">
+            <a className="font-weight-light Navbar__items" href="/security">
                 Security Council
-              </a>
-           </Link>  
+            </a>
+          </Link>
 
-            </div> 
         </div>
+      </div>
 
-
-
-        <style jsx>{`
+      <style jsx>{`
             .Navbar {
                 width: 100%;
                 padding: 0.5rem 0;
@@ -154,9 +152,8 @@ const Navbar = () => {
 
               }
         `}</style>
-      </div>
-    );
-  }
+    </div>
+  )
+}
 
-
-export default Navbar;
+export default Navbar

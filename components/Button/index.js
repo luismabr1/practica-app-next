@@ -1,11 +1,11 @@
-import {colors} from '../../styles/themes';
-const Button = ({children, onClick}) => {
-    return(
-        <>
-            <button onClick={onClick}>
-                {children}
-            </button>
-            <style jsx>{`
+import { colors } from '../../styles/themes'
+const Button = ({ children, onClick }) => {
+  return (
+    <>
+      <button onClick={onClick}>
+        {children}
+      </button>
+      <style jsx>{`
             button {
                 align-items:center;
                 background: ${colors.black};
@@ -28,8 +28,8 @@ const Button = ({children, onClick}) => {
                 opacity: .7;
             }
             `} </style>
-        </>
-    )
+    </>
+  )
 }
 
-export default Button;
+export default Button
