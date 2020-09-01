@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css';
 import AppLayout from '../components/AppLayout';
 import {colors} from '../styles/themes'
-import Navbar from '../components/Navbar';
 import Button from '../components/Button';
 import Google from '../components/Icons/Google';
 
@@ -15,7 +14,6 @@ export default function Home() {
         <script src="../js/bootstrap.js"/>
       </Head>
 
-        <Navbar/>
         <AppLayout>
           <section>
             <img src='/LOGO-MOVENU-ABRA-NORMAL.PNG' alt="logo"/> 
