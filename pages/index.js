@@ -1,17 +1,33 @@
-import Head from 'next/head'
+import {useState, useEffect} from 'react';
+import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import AppLayout from '../components/AppLayout';
 import {colors} from '../styles/themes'
 import Button from '../components/Button';
 import Google from '../components/Icons/Google';
+import {loginWithGoogle, onAuthStateChanged} from '../firebase/client';
 
 export default function Home() {
+  const [user, setUser] = useState(undefined)
+
+  useEffect(() => {
+    onAuthStateChanged(setUser)
+  }, [])
+
+  
+  const handleClick = () => {
+    loginWithGoogle()
+    .then(setUser).catch(err => {
+      console.log(err)
+    })
+  }
+  console.log(user)
+
   return (
     <div>
       <Head>
       <title>Practica 2020</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="../js/bootstrap.js"/>
       </Head>
 
         <AppLayout>
@@ -19,10 +35,18 @@ export default function Home() {
             <img src='/LOGO-MOVENU-ABRA-NORMAL.PNG' alt="logo"/> 
             <h1>MOVENU 2020</h1>
             <div>
-              <Button>
-                <Google width={32} height={32} />
-                Login with Google
-              </Button>
+              {
+                user === null && <Button onClick={handleClick}>
+                  <Google width={24} height={24} />
+                  Login with Google
+                </Button>
+                }
+                {
+                 user && user.avatar && <div>
+                  <img src={user.avatar} alt=""/>
+                  <strong>{user.name}</strong>
+                </div>
+                }
             </div>
           </section>
 
