@@ -23,10 +23,10 @@ const HomeLayout = ({children}) => {
               </div>
 
             <div className="container">
-              <main>
+
                 {children}
 
-              </main>
+
 
             </div>
 
