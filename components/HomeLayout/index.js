@@ -26,8 +26,6 @@ const HomeLayout = ({children}) => {
 
                 {children}
 
-
-
             </div>
 
 
@@ -39,13 +37,21 @@ const HomeLayout = ({children}) => {
             .container{
               display:grid;
               width: 100%;
-              margin-right: auto;
-              margin-left: auto;
+              margin: 1rem;
+              padding: 1rem;
+              justify-content: center;
+              flex-direction: columns;
             }
-        .Badges{
-          width: 100%;
+            @media (min-width: 50rem) {
+              .container {
+                grid-template-columns: auto auto;
+                justify-items: center;
+              }
+            }
 
-        }
+            .Badges{
+              width: 100%;
+            }
 
       .Badges__hero {
         width: 100%;

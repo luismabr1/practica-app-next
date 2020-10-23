@@ -35,37 +35,29 @@ const HomePage = () => {
     return (
         <>
         <HomeLayout>
-                        <section>
+
+          <section>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
                         </section>
-                        
+
 {/* La doble negacion !!: en este caso lo use para transformar el objeto de user en true (que trajo algo) en vez del objeto en si, para que, si hay algo dentro de la variable,  hacer una comparacion directamente entre booleanos */}
-                        {!!user === USER_STATES.LOGGED && ( <div className="comment">
-
-
-
+                        {!!user === USER_STATES.LOGGED && ( <div className="comment">   
                                 <CommentSection />
-
                         </div>
                         )}
                         {user === USER_STATES.NOT_KNOWN && USER_STATES.LOGGED && <Loader/>}
+
+
         </HomeLayout>
 
             <style jsx>{`
- 
-            nav{
-                botton:0;
-                border-top:1px solid #ccc;
-                height: 49px;
-                position:fixed;
-            }
             .comment {
-                width: 50vh;
-                height: 60vh;
+                width: 40vh;
+                height: 50vh;
                 overflow-y:auto;
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
                 background: #fff;
-              } 
+              }
 
             h2{
                 font-size: 21px;
@@ -73,13 +65,14 @@ const HomePage = () => {
                 padding:15px;
             }
             section{
-              background: #fff;
+                background: #fff;
                 border-radius: 10px;
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
                 overflow-y:auto;
                 position:relative;
-                height:100%;
-                width: 100%;
+                height:auto;
+                width: auto;
+                margin: 30px;
             }
             `}
             </style>

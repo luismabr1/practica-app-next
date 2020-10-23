@@ -35,9 +35,9 @@ const Navbar = () => {
   return (
     <div className="Navbar">
       <div className="Navbar_items">
-        <div>
+        <div className="Navbar__brand">
           <Link href="/">
-            <a className="Navbar__brand">
+            <a>
               {/* <img className="Navbar__brand-logo" src={logo} alt="Logo" /> */}
               <span className="font-weight-light">MOVENU</span>
               <span className="font-weight-bold">2020</span>
@@ -97,6 +97,17 @@ const Navbar = () => {
           display:grid;
           text-align: center;
         }
+                      .Navbar__brand {
+                color: #ffffff;
+                display: inline-flex;
+                align-items: center;
+                text-decoration: none;
+              }
+              
+              .Navbar__brand:hover {
+                color: #ffffff;
+                text-decoration: none;
+              }
 
 
         @media(min-width: 50rem){
@@ -119,7 +130,15 @@ const Navbar = () => {
           .Navbar_items{
             display: none;
           }
+          
         }
+        .font-weight-light {
+          font-weight: 300 !important;
+
+        }
+        .font-weight-bold {
+          font-weight: 700 !important;
+}
 
 
       `}</style>
