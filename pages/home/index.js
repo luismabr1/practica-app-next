@@ -1,23 +1,14 @@
-import { useState, useEffect } from "react";
 import { loginWithGoogle, onAuthStateChanged } from "../../firebase/client";
 import HomeLayout from '../../components/HomeLayout'
 import CommentSection from '../../components/CommentSection'
 import Loader from '../../components/Loader'
 import {useRouter} from 'next/router'
+import useUser, {USER_STATES} from '../../hooks/useUser'
 
-const USER_STATES = {
-    LOGGED: true,
-    NOT_KNOWN: undefined
-  }
 
 const HomePage = () => {
-  const [user, setUser] = useState(USER_STATES.NOT_KNOWN);
-  const router = useRouter()
-
-  useEffect(() => {
-    onAuthStateChanged(setUser);
-  }, []);
-
+  const user = useUser();
+  const router = useRouter();
 
 /*   useEffect(()=>{
     user && router.replace('/home')

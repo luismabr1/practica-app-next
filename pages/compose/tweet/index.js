@@ -1,7 +1,8 @@
 import HomeLayout from '../../../components/HomeLayout';
 import Button from '../../../components/Button';
+import useUser from '../../../hooks/useUser'
 const ComposeTweet = () => {
-    const [user, setUser] = useState();
+ const user = useUser(); 
     return (
         <>
         <HomeLayout>

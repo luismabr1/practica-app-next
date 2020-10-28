@@ -6,10 +6,6 @@ import { colors } from "../styles/themes";
 import Button from '../components/Button'
 import Google from '../components/Icons/Google'
 
-
-
-
-
 export default function Home() {
   return (
     <div>
