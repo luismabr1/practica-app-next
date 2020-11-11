@@ -8,7 +8,7 @@ import useUser, {USER_STATES} from '../../hooks/useUser'
 
 const HomePage = () => {
   const user = useUser();
-  const router = useRouter();
+  /* const router = useRouter(); */
 
 /*   useEffect(()=>{
     user && router.replace('/home')
