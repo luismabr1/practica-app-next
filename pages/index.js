@@ -1,8 +1,7 @@
-
 import Head from "next/head";
+import Link from "next/link"
 import AppLayout from "../components/AppLayout";
 import { colors } from "../styles/themes";
-
 import Button from '../components/Button'
 import Google from '../components/Icons/Google'
 
@@ -22,7 +21,9 @@ export default function Home() {
             
               <Button /* onClick={handleClick} */>
                 <Google width={24} height={24} />
-                Login with Google
+                <Link href="/home">
+                <a>Entrar</a>
+                </Link> 
               </Button>
 
           </div>
