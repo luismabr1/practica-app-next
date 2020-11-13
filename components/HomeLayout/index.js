@@ -9,7 +9,6 @@ const HomeLayout = ({children}) => {
     return (
         <>
 
-              <Navbar/>
               <div className="Badges">
                   <div className="Badges__hero">
                       <div className="Badges__container">
@@ -17,10 +16,11 @@ const HomeLayout = ({children}) => {
                               className="Badges_conf-logo"
                               src={confLogo}
                               alt="Conf Logo"
-                          />
+                              />
                       </div>
                   </div>
               </div>
+            <Navbar/>
 
             <div className="container">
 
@@ -55,13 +55,11 @@ const HomeLayout = ({children}) => {
 
       .Badges__hero {
         width: 100%;
+        height: 55%;
         padding: 2rem 0;
         background: url('../Icons/Stars.js'), #1B1B25;
         background-repeat: repeat;
-        margin-bottom: 1rem;
-        padding: 15px;
       }
-      
       .Badges__hero>.Badges__container {
         display: flex;
         flex-direction: column;

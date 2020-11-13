@@ -88,3 +88,5 @@ const Inscripcion = () => {
   );
 }
 
+export default Inscripcion
+

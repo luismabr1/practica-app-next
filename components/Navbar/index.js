@@ -93,16 +93,17 @@ const Navbar = () => {
         background-color: #1c3643;
       }
         .Navbar_items {
-          justify-items: center;
           display:grid;
+          justify-items: center;
           text-align: center;
         }
-                      .Navbar__brand {
-                color: #ffffff;
-                display: inline-flex;
-                align-items: center;
-                text-decoration: none;
-              }
+        .Navbar__brand {
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+
+        }
               
               .Navbar__brand:hover {
                 color: #ffffff;
