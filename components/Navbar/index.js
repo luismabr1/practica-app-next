@@ -21,9 +21,6 @@ const Navbar = () => {
     onAuthStateChanged(setUser);
   }, []);
 
-
-
-
   const handleClick = () => {
     loginWithGoogle()
       .catch((err) => {
@@ -44,34 +41,34 @@ const Navbar = () => {
             </a>
           </Link>
         </div>
-          <div>
+          <div className="Navbar__options">
                 <Link href="/">
-                  <a className="font-weight-light Navbar__items" href="/unicameral">
+                  <a className="font-weight-light Navbar__links" href="/unicameral">
                     Contenido1
                   </a>
                 </Link>
                 <Link href="/">
-                  <a className="font-weight-light Navbar__items" href="/bicameral">
+                  <a className="font-weight-light Navbar__links" href="/bicameral">
                   Contenido1
                   </a>
                 </Link>
                 <Link href="/">
-                  <a className="font-weight-light Navbar__items" href="/security">
+                  <a className="font-weight-light Navbar__links" href="/security">
                   Contenido1
                   </a>
                 </Link>
             </div>
+          <div className="Navbar__login">
+              <span>
+                {user===USER_STATES.NOT_LOGGED && <Button onClick={handleClick}>
+                        <Google width={24} height={24} />
+                        Login
+                  </Button>
+                }
+              </span>
+          </div>
             </div>
         
-        <div>
-            <span>
-              {user===USER_STATES.NOT_LOGGED && <Button onClick={handleClick}>
-                      <Google width={24} height={24} />
-                      Login with Google
-                </Button>
-              }
-            </span>
-        </div>
 
         <div className="Navbar_menu">
               <Menu />
@@ -79,32 +76,55 @@ const Navbar = () => {
 
 
       <style jsx>{`
-      .Navbar > div{
+      .Navbar{
+        width: 100%;
         font-size: 1.6em;
-        min-height: 25px;
-        padding: 0.1rem 4rem;
+        min-height: 26px;
+        padding: 0.3rem 4rem;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        backdrop-filter: blur(5px);
+        padding: 1rem 0;
+        padding-left: 15px;
+        background-color: #1c3643;
+       }
+
       }
       .Navbar_menu{
         display: none;
       }
-      .Navbar{
-        padding: 0.5rem 0;
-        padding-left: 15px;
-        background-color: #1c3643;
+      .Navbar__options {
+        display: grid;
+        color: #fff;
+        padding: 10px 50px;
+        grid-template-columns: 1fr auto 1fr;
+        grid-gap: 1em;
+
       }
+      .Navbar__links {
+        color: #fff;
+      }
+
         .Navbar_items {
           display:grid;
           justify-items: center;
           text-align: center;
         }
+
+        .Navbar__login{
+          padding: 8px;
+          margin-right: 15px;
+        }
+        
         .Navbar__brand {
             color: #ffffff;
             display: inline-flex;
             align-items: center;
             text-decoration: none;
+            margin: 10px;
 
         }
-              
               .Navbar__brand:hover {
                 color: #ffffff;
                 text-decoration: none;

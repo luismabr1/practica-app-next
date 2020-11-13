@@ -55,7 +55,7 @@ const HomeLayout = ({children}) => {
 
       .Badges__hero {
         width: 100%;
-        height: 55%;
+        height: 25rem;
         padding: 2rem 0;
         background: url('../Icons/Stars.js'), #1B1B25;
         background-repeat: repeat;
@@ -82,8 +82,8 @@ const HomeLayout = ({children}) => {
       
       
       .Badges_conf-logo {
-        margin-bottom: 2rem;
-        width: 260px;
+        margin-top: 3rem;
+        width: 360px;
       }
       
       .Badges__buttons a {

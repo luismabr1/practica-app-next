@@ -29,6 +29,18 @@ const HomePage = () => {
 
           <section>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
                         </section>
 
 {/* La doble negacion !!: en este caso lo use para transformar el objeto de user en true (que trajo algo) en vez del objeto en si, para que, si hay algo dentro de la variable,  hacer una comparacion directamente entre booleanos */}
@@ -56,14 +68,13 @@ const HomePage = () => {
                 padding:15px;
             }
             section{
-                background: #fff;
+                background: rgba(250, 250, 250, 0.3);
                 border-radius: 10px;
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-                overflow-y:auto;
                 position:relative;
-                height:auto;
                 width: auto;
                 margin: 30px;
+                z-index: -1;
             }
             `}
             </style>
