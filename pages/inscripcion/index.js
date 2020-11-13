@@ -6,14 +6,15 @@ import OptionsList from '../../components/OptionsList'
 
 
 const Inscripcion = () => {
-  const [timeline, setTimeline] = useState([])
+  const [timeline, setTimeline] = useState([]) 
+
 
   useUser();
-  useEffect(()=>{
-      fetch('http://localhost:3000/api/statuses/home_timeline')
+    useEffect((timeline)=>{
+      fetch('https://practica-app-next.vercel.app/api/statuses/home_timeline')
       .then(res=>res.json())
       .then(setTimeline)
-  })
+  })  
   return (
       <>
       <OptionsList />
@@ -87,4 +88,3 @@ const Inscripcion = () => {
   );
 }
 
-export default Inscripcion;
