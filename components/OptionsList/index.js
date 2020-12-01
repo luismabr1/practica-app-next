@@ -31,9 +31,14 @@ const OptionsList= () =>{
             .Options{
                 background: #fff;
                 border-radius: 10px;
+                padding: 15px;
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-                height: 100%;
-                width: 100%;
+                height:300px;
+                width: 200px;
+                display: inline-grid;
+            }
+            ul li{
+                text-decoration: none;
             }
         `}
         </style>

@@ -15,7 +15,7 @@ const AppLayout = ({ children }) => {
             display: grid;
             height: 100vh;
             place-items:center;
-          } 
+          }  
 
           main {
             background: #fff;

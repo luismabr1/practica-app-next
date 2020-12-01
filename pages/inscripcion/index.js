@@ -17,24 +17,29 @@ const Inscripcion = () => {
   })  
   return (
       <>
-      <OptionsList />
-      <AppLayout>
-              <section>
-              <header>
+
+      <div className="container">
+        <OptionsList />
+        <div className="main">
+          <div className="section">
+          <header>
                   <h2>Inicio</h2>
-              </header>
-                  {timeline.map(users =>{
-                      return (
-                          <UsersList key={users.id}
-                          username={users.username}
-                          name = {users.name}
-                          comentario= {users.company.catchPhrase}
-                          id={users.id}
-                          />
-                      )
-                  })}
-              </section>
-        </AppLayout>
+          </header>
+                    {timeline.map(users =>{
+                        return (
+                            <UsersList key={users.id}
+                            username={users.username}
+                            name = {users.name}
+                            comentario= {users.company.catchPhrase}
+                            id={users.id}
+                            />
+                        )
+                    })}
+          </div>
+        </div>
+      </div>
+
+
 
           <style jsx>{`
           header{
@@ -48,31 +53,9 @@ const Inscripcion = () => {
             top:0;
             width: 100%;
         }
-            section {
-                        background: #fff;
-                        border-radius: 10px;
-                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-                        overflow-y:auto;
-                        position:relative;
-                        height:100%;
-                        width: 100%;
-            }
-
           h2{
               font-size: 21px;
               font-weight: 700;
-          }
-          .Options{
-            display: grid;
-
-              background: #fff;
-              border-radius: 10px;
-              box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-          }
-          .wrapper{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 100px 100px;
           }
 
           nav{
@@ -80,8 +63,26 @@ const Inscripcion = () => {
               border-top:1px solid #ccc;
               height: 49px;
               position:fixed;
-
           }
+
+          .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            grid-auto-rows: min-content; 
+          }
+          .main{
+            display: inline-grid;
+          }
+        .section{
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            overflow-y:auto;
+            position:relative;
+            height: 500px;
+            width:400px;
+        }
           `}
           </style>
       </>
