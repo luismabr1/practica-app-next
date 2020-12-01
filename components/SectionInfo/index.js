@@ -25,7 +25,7 @@ const SectionInfo = () => {
             .image{
                 min-width: 468px;
                 width: 100%;
-                background-image: url(https://cdn.cosmicjs.com/d07bf790-97ed-11ea-a825-35a8097601bc-homeintro2.png);
+                background-image: url();
                 background-size: cover;
                 background-position: top;
             }
