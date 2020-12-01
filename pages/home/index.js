@@ -4,6 +4,8 @@ import CommentSection from '../../components/CommentSection'
 import Loader from '../../components/Loader'
 import {useRouter} from 'next/router'
 import useUser, {USER_STATES} from '../../hooks/useUser'
+import SectionInfo from '../../components/SectionInfo';
+import SectionAbout from '../../components/SectionAbout'
 
 
 const HomePage = () => {
@@ -27,22 +29,8 @@ const HomePage = () => {
         <>
         <HomeLayout>
 
-          <section>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus odio minus inventore, ullam provident ratione praesentium aperiam magni, at nemo eius obcaecati dignissimos saepe nesciunt. Velit ad cumque consectetur?</p>
-                        </section>
-
+        <SectionAbout />
+        <SectionInfo />
 {/* La doble negacion !!: en este caso lo use para transformar el objeto de user en true (que trajo algo) en vez del objeto en si, para que, si hay algo dentro de la variable,  hacer una comparacion directamente entre booleanos */}
                         {!!user === USER_STATES.LOGGED && ( <div className="comment">   
                                 <CommentSection />

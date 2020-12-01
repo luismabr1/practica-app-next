@@ -28,19 +28,19 @@ const HomeLayout = ({children}) => {
 
             </div>
 
-
-            
+            <div className="Footer">
+              <div className="Autor">
+                <span>Luis Brito</span>
+              </div>
+            </div>
 
 
 
             <style jsx>{`
             .container{
-              display:grid;
               width: 100%;
-              margin: 1rem;
-              padding: 1rem;
               justify-content: center;
-              flex-direction: columns;
+              flex-direction: row;
             }
             @media (min-width: 50rem) {
               .container {
@@ -97,6 +97,11 @@ const HomeLayout = ({children}) => {
         display: flex;
         justify-content: flex-end;
         margin-bottom: 1rem;
+      }
+
+      .Footer{
+        min-height: 200px;
+        width: 100%
       }
      
   `}</style>
