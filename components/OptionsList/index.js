@@ -2,43 +2,47 @@ import React from 'react';
 
 const OptionsList= () =>{
     var data = [{
-        id:'1',
-        name: 'Compras',
+        "id":"1",
+        "name": 'Compras',
       },
       {
-        id:'2',
-        name: 'Ventas',
+        "id":"2",
+        "name": 'Ventas',
         },
         {
-        id:'3',
-        name: 'Inventario',
+        "id":"3",
+        "name": 'Inventario',
         }
     ]
     return (
         <>
             <div className="Options">
-            {data.map(options=>{
-                return(
-                    <ul>
-                        <li key={data.id}>{options.name}</li>
-                    </ul>
-                )
-            })
-            }
-        </div>
+                <ul>
+                    {data.map(options=>{
+                        return(
+                                <li key={data.id}>{options.name}</li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
 
         <style jsx>{`
             .Options{
                 background: #fff;
-                border-radius: 10px;
-                padding: 15px;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-                height:300px;
                 width: 200px;
                 display: inline-grid;
             }
             ul li{
-                text-decoration: none;
+                /* nunca supe porque no pude quitarle la decoracion con text-decoration:none 1/12/2020 */
+                list-style-type: none;
+                padding: 10px;
+                margin-bottom: 5px;
+                border: 1px solid black;
+                transition: background-color .5s;
+            }
+            ul li:hover{
+                background-color: red;
             }
         `}
         </style>

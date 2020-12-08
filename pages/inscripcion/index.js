@@ -3,6 +3,7 @@ import AppLayout from '../../components/AppLayout'
 import UsersList from '../../components/UsersList'
 import useUser from '../../hooks/useUser'
 import OptionsList from '../../components/OptionsList'
+import Form from '../../components/Form'
 
 
 const Inscripcion = () => {
@@ -19,24 +20,26 @@ const Inscripcion = () => {
       <>
 
       <div className="container">
-        <OptionsList />
-        <div className="main">
-          <div className="section">
-          <header>
-                  <h2>Inicio</h2>
-          </header>
-                    {timeline.map(users =>{
-                        return (
-                            <UsersList key={users.id}
-                            username={users.username}
-                            name = {users.name}
-                            comentario= {users.company.catchPhrase}
-                            id={users.id}
-                            />
-                        )
-                    })}
+          <Form />
+          <OptionsList />
+
+          <div className="main">
+                <div className="section">
+                    <header>
+                            <h2>Inicio</h2>
+                    </header>
+                              {timeline.map(users =>{
+                                  return (
+                                      <UsersList key={users.id}
+                                      username={users.username}
+                                      name = {users.name}
+                                      comentario= {users.company.catchPhrase}
+                                      id={users.id}
+                                      />
+                                  )
+                              })}
+                </div>
           </div>
-        </div>
       </div>
 
 
@@ -67,7 +70,7 @@ const Inscripcion = () => {
 
           .container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 600px);
             grid-gap: 10px;
             grid-auto-rows: min-content; 
           }
