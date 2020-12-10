@@ -6,16 +6,11 @@ import OptionsList from '../../components/OptionsList'
 import Form from '../../components/Form'
 
 
-const Inscripcion = () => {
-  const [timeline, setTimeline] = useState([]) 
+const Inscripcion = (props) => {
 
-
+  const timeline = props.preInscritos
   useUser();
-    useEffect((timeline)=>{
-      fetch('https://practica-app-next.vercel.app/api/statuses/home_timeline')
-      .then(res=>res.json())
-      .then(setTimeline)
-  })  
+
   return (
       <>
 
@@ -23,7 +18,7 @@ const Inscripcion = () => {
           <Form />
           <OptionsList />
 
-          <div className="main">
+           <div className="main">
                 <div className="section">
                     <header>
                             <h2>Inicio</h2>
@@ -39,7 +34,7 @@ const Inscripcion = () => {
                                   )
                               })}
                 </div>
-          </div>
+          </div> 
       </div>
 
 
@@ -70,9 +65,9 @@ const Inscripcion = () => {
 
           .container {
             display: grid;
-            grid-template-columns: repeat(3, 600px);
+            grid-template-columns: repeat(3, 200px);
             grid-gap: 10px;
-            grid-auto-rows: min-content; 
+            grid-auto-flow: row;
           }
           .main{
             display: inline-grid;
@@ -86,10 +81,18 @@ const Inscripcion = () => {
             height: 500px;
             width:400px;
         }
+
           `}
           </style>
       </>
   );
+}
+
+Inscripcion.getInitialProps = async (ctx) => {
+  const res = await fetch(`https://practica-app-next.vercel.app/api/statuses/home_timeline`)
+  const preInscritos = await res.json()
+  const body = JSON.stringify(preInscritos)
+  return  {body}
 }
 
 export default Inscripcion
