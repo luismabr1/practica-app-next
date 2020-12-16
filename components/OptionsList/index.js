@@ -1,9 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
+import ListSection from '../ListSection'
 
 
 const OptionsList= (props) =>{
-/*     const {comite, setComite} = useState([])
-      const [timeline, setTimeline] = useState([]) */
+    const timeline=props.timeline
+    const [comite, setComite] = useState('')
+    
+    const handleClick = async (props) => {
+        await fetch(`https://practica-app-next.vercel.app/api/comites/${props}`, {mode: 'cors'})
+        .then(response => response.json())
+        .then(data=>setComite(data))
+    }
+
+
     var data = [{
         "id":"1",
         "name": 'crisis',
@@ -17,49 +26,33 @@ const OptionsList= (props) =>{
         "name": 'security',
         }
     ]
-   /*  useEffect((timeline)=>{
-        fetch('https://practica-app-next.vercel.app/api/statuses/home_timeline')
-        .then(res=>res.json())
-        .then(setTimeline)
-    }) */
 
 
-    const handleClick = (x) => {
-        console.log(x)
-
-    }
     return (
         <>
             <div className="Options">
                 <ul>
                     {data.map(options=>{
                         return(
-                                <li key={data.id}  onClick={()=>  handleClick(options.name) }>{options.name}</li>
+
+                                <li 
+                                    key={options.id}  
+                                    onClick={ () => handleClick(options.name) }>
+                                    {options.name}
+                                </li> 
                             )
                         })
                     }
                 </ul>
             </div>
 
-            {/* <div className="main">
-                <div className="section">
-                    <header>
-                            <h2>Inicio</h2>
-                    </header>
-                              {timeline.map(users =>{
-                                  return (
-                                      <UsersList key={users.id}
-                                      username={users.username}
-                                      name = {users.name}
-                                      comentario= {users.company.catchPhrase}
-                                      id={users.id}
-                                      />
-                                  )
-                              })}
-                </div>
-          </div> */}
+            {comite ?
+            <ListSection timeline={comite} />
+            :
+            <ListSection timeline={timeline} />
 
 
+            }
 
         <style jsx>{`
             .Options{
@@ -77,19 +70,6 @@ const OptionsList= (props) =>{
             }
             ul li:hover{
                 background-color: red;
-            }
-
-            .main{
-                display: inline-grid;
-              }
-            .section{
-                background: #fff;
-                border-radius: 10px;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-                overflow-y:auto;
-                position:relative;
-                height: 500px;
-                width:400px;
             }
         `}
         </style>

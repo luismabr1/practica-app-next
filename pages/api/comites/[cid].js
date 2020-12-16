@@ -1,4 +1,4 @@
-import {preInscritos} from '../../../db'
+import {preInscritos} from '../../../db/db'
 
 const handler = (req, res) => {
     const method = req.method;

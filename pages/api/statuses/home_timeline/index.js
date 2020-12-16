@@ -1,9 +1,6 @@
-import {preInscritos} from '../../../../db'
+import {preInscritos} from '../../../../db/db'
 
 const handler = (req, res) => {
-/*    res.statusCode= 200
-      res.setHeader('Content-Type', 'application/json')
-      res.send(JSON.stringify(preInscritos)) */
     const method = req.method;
     const {username, name}= req.body;
 
