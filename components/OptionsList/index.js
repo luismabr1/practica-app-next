@@ -5,9 +5,9 @@ import ListSection from '../ListSection'
 const OptionsList= (props) =>{
     const timeline=props.timeline
     const [comite, setComite] = useState('')
-    
+
     const handleClick = async (props) => {
-        await fetch(`https://practica-app-next.vercel.app/api/comites/${props}`, {mode: 'cors'})
+        await fetch(`https://practica-app-next.vercel.app/api/comites/${props}`)
         .then(response => response.json())
         .then(data=>setComite(data))
     }
@@ -34,7 +34,6 @@ const OptionsList= (props) =>{
                 <ul>
                     {data.map(options=>{
                         return(
-
                                 <li 
                                     key={options.id}  
                                     onClick={ () => handleClick(options.name) }>

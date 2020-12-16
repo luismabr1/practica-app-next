@@ -44,17 +44,32 @@ const Navbar = () => {
           <div className="Navbar__options">
                 <Link href="/">
                   <a className="font-weight-light Navbar__links" href="/unicameral">
-                    Contenido1
+                    Home
                   </a>
                 </Link>
                 <Link href="/">
                   <a className="font-weight-light Navbar__links" href="/bicameral">
-                  Contenido1
+                  ¿Quienes somos?
                   </a>
                 </Link>
                 <Link href="/">
                   <a className="font-weight-light Navbar__links" href="/security">
-                  Contenido1
+                  Conferencia 2020
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="font-weight-light Navbar__links" href="/security">
+                  Comités
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="font-weight-light Navbar__links" href="/security">
+                  Contacto
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="font-weight-light Navbar__links" href="/security">
+                  Links
                   </a>
                 </Link>
             </div>
@@ -97,13 +112,19 @@ const Navbar = () => {
       .Navbar__options {
         display: grid;
         color: #fff;
-        padding: 10px 50px;
-        grid-template-columns: 1fr auto 1fr;
-        grid-gap: 1em;
-
+        padding: 2px;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-gap: 3.5em;
       }
       .Navbar__links {
         color: #fff;
+        text-decoration: none;
+        transition: .5s;
+      }
+
+      .Navbar__links:hover {
+        color: red;
+        text-decoration: none;
       }
 
         .Navbar_items {
