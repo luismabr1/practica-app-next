@@ -3,7 +3,6 @@ import Link from "next/link";
 import Button from '../Button'
 import Google from '../Icons/Google'
 import { loginWithGoogle, onAuthStateChanged } from "../../firebase/client";
-import {useRouter} from 'next/router'
 import Menu from '../Icons/Menu';
 
 /* import logo from '../public/LOGO-MOVENU-BLANCO.png'; */

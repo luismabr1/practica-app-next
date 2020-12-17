@@ -4,7 +4,7 @@ import ListSection from '../ListSection'
 
 const OptionsList= (props) =>{
     const timeline=props.timeline
-    const [comite, setComite] = useState('')
+    const [comite, setComite] = useState(timeline)
 
     const handleClick = async (props) => {
         await fetch(`https://practica-app-next.vercel.app/api/comites/${props}`)
@@ -45,13 +45,9 @@ const OptionsList= (props) =>{
                 </ul>
             </div>
 
-            {comite ?
+
             <ListSection timeline={comite} />
-            :
-            <ListSection timeline={timeline} />
 
-
-            }
 
         <style jsx>{`
             .Options{

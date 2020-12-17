@@ -2,7 +2,6 @@ import { loginWithGoogle, onAuthStateChanged } from "../../firebase/client";
 import HomeLayout from '../../components/HomeLayout'
 import CommentSection from '../../components/CommentSection'
 import Loader from '../../components/Loader'
-import {useRouter} from 'next/router'
 import useUser, {USER_STATES} from '../../hooks/useUser'
 import SectionInfo from '../../components/SectionInfo';
 import SectionAbout from '../../components/SectionAbout'
@@ -10,11 +9,6 @@ import SectionAbout from '../../components/SectionAbout'
 
 const HomePage = () => {
   const user = useUser();
-  /* const router = useRouter(); */
-
-/*   useEffect(()=>{
-    user && router.replace('/home')
-  },[user]) */
 
   const handleClick = () => {
     loginWithGoogle()
