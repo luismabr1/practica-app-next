@@ -2,6 +2,7 @@ import { fonts, colors, breakpoints } from "../../styles/themes.js";
 import { addOpacityToColor } from "../../styles/utils";
 import confLogo from '../../public/LOGO-MOVENU-BLANCO.png';
 import Navbar from '../Navbar';
+import Footer from '../Footer'
 
 const backgroundColor = addOpacityToColor(colors.primary, 0.3);
 const HomeLayout = ({children}) => {
@@ -28,11 +29,7 @@ const HomeLayout = ({children}) => {
 
             </div>
 
-            <div className="Footer">
-              <div className="Autor">
-                <span>Luis Brito</span>
-              </div>
-            </div>
+          <Footer />
 
 
 
@@ -99,11 +96,6 @@ const HomeLayout = ({children}) => {
         margin-bottom: 1rem;
       }
 
-      .Footer{
-        min-height: 200px;
-        width: 100%
-      }
-     
   `}</style>
   <style jsx global>
         {`
