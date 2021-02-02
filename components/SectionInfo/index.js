@@ -2,8 +2,8 @@ const SectionInfo = () => {
     return(
         <>  
 
-            <section className="Container">
-                <div className="image"></div>
+            <section className="Container-info">
+                <div className="image"><img src="" alt=""/></div>
                 <div className="sumary">
                     <div className="header-container">
                         <h1 className="header-text">Mi titulo! Este titulo es largo porque quiero probar el wrap</h1>
@@ -15,8 +15,8 @@ const SectionInfo = () => {
             </section>
         <style>
             {`
-            .Container{
-                margin: 0;
+            .Container-info{
+                margin: 5rem;
                 display:flex;
                 -webkit-box-orient: horizontal;
                 -webkit-box-direction:normal;

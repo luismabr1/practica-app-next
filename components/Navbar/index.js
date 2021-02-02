@@ -92,7 +92,7 @@ const Navbar = () => {
       <style jsx>{`
       .Navbar{
         width: 100%;
-        font-size: 1.6em;
+        font-size: 1.3em;
         min-height: 26px;
         padding: 0.3rem 4rem;
         position: -webkit-sticky;
@@ -112,8 +112,9 @@ const Navbar = () => {
         display: grid;
         color: #fff;
         padding: 2px;
-        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-        grid-gap: 3.5em;
+        grid-template-columns: 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr;
+        grid-gap: 6em;
+        float:left;
       }
       .Navbar__links {
         color: #fff;
