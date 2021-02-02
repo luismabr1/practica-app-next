@@ -1,7 +1,7 @@
 import { fonts, colors, breakpoints } from "../../styles/themes.js";
 import { addOpacityToColor } from "../../styles/utils";
 import confLogo from '../../public/LOGO-MOVENU-ABRA-BLANCO.png';
-import Navbar from '../Navbar';
+import Navbar from '../Navbar/index';
 import Footer from '../Footer'
 
 const backgroundColor = addOpacityToColor(colors.primary, 0.3);
