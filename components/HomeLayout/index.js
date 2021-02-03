@@ -1,6 +1,6 @@
 import { fonts, colors, breakpoints } from "../../styles/themes.js";
 import { addOpacityToColor } from "../../styles/utils";
-import confLogo from '../../public/LOGO-MOVENU-ABRA-BLANCO.png';
+import confLogo from '../../public/LOGO-MOVENU-BLANCO.png';
 import Navbar from '../Navbar/index';
 import Footer from '../Footer'
 
