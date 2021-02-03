@@ -5,13 +5,13 @@ import Box from '@material-ui/core/Box';
 import HomeLayout from '../components/HomeLayout'
 import ProTip from '../src/ProTip';
 import Link from '../src/Link';
-import Copyright from '../src/Copyright';
+
 
 export default function Index() {
   return (
     <HomeLayout>
-      <Container maxWidth="sm">                                   
-        <Box sx={{ my: 4 }}>
+      <Container maxWidth="sm">
+        <Box sx={{ my: 5 }}>
           <Typography variant="h4" component="h1" gutterBottom>
             MOVENU 2020
           </Typography>
@@ -19,7 +19,6 @@ export default function Index() {
             Go to the about page
           </Link>
           <ProTip />
-          <Copyright />
         </Box>
       </Container>
     </HomeLayout>

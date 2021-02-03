@@ -29,13 +29,13 @@ export default function ButtonAppBar() {
       <AppBar position="sticky" color="primary">
         <Toolbar>
           <Hidden smUp>
-          <IconButton edge="start" className={classes.menuButton}  color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
+            <IconButton edge="start" className={classes.menuButton}  color="inherit" aria-label="menu">
+              <MenuIcon />
+            </IconButton>
           </Hidden>
-          <Typography variant="h6" className={classes.title}>
-            MOVENU 2020
-          </Typography>
+            <Typography variant="h6" className={classes.title}>
+              MOVENU 2020
+            </Typography>
           <Hidden smDown>
           <Typography variant="subtitle1" className={classes.title}>
             Quienes Somos

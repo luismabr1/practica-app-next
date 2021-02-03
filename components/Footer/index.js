@@ -1,42 +1,41 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Link from '@material-ui/core/Link';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Container from '@material-ui/core/Container';
+import Copyright from '../../src/Copyright';
 
 
-const Footer = () =>{
-    return(
-        <>
-            <div className="Footer">
-                <div className="Autor">
-                    <span><a href="www.linkedin.com/in/luismabr">Luis Brito</a> </span>
-                </div>
-            </div>
+const useStyles = makeStyles((theme) => ({
+    root: {
+      '& > * + *': {
+        marginLeft: theme.spacing(2),
+      },
+      title: {
+        flexGrow: 1,
+      },
+      container: {
+        flexGrow: 1,
+        margin: "auto",
+        fontSize: "30",
+        },
+    },
+  }));
 
+export default function Footer() {
+    const classes = useStyles();
+    const preventDefault = (event) => event.preventDefault();
 
-            <style jsx>{`
-                .Footer{
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 1.3em;
-                    min-height: 26px;
-                    padding: 0.3rem 4rem;
-                    position: -webkit-sticky;
-                    position: sticky;
-                    botton: 0px;
-                    padding: 1rem 0;
-                    padding-left: 15px;
-                    background-color: #1c3643;
-                }
-                .autor{
-                    width: 100px;
-
-                }
-
-
-                `}
-            </style>
-        </>
-    )
-
+  return (
+    <div className={classes.root}>
+      <AppBar position="sticky" color="primary">
+          <Toolbar>
+            <Container variant="h6" align="center" maxWidth="sm">
+                <Copyright />
+            </Container>
+          </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
-
-export default Footer;
