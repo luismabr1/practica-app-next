@@ -2,8 +2,13 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import {Paper} from '@material-ui/core'
 import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
+
+
+
 
 function Example(props)
+
 {
     var items = [
         {
@@ -30,21 +35,29 @@ function Example(props)
 function Item(props)
 {
     return (
-        <Paper>
-            <img src={props.item.url} alt="Foto aleatoria" />
-            <h2>{props.item.name}</h2>
-            <p>{props.item.description}</p>
+        <Container>
+            <Paper>
+                <img src={props.item.url} alt="Foto aleatoria" width="100%"/>
+                <h2>{props.item.name}</h2>
+                <p>{props.item.description}</p>
 
-            <Button className="CheckButton">
-                Check it out!
-            </Button>
-        </Paper>
+                <Button className="CheckButton">
+                    Check it out!
+                </Button>
+            </Paper>
+        </Container>
     )
 }
+
+
 const CarouselComponent = () => {
+
     return(
         <>
-            <Example/>
+            <Container maxWidth="lg">
+                <Example/>
+            </Container>
+
         </>
     )
 }

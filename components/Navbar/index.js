@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Link from '@material-ui/core/Link';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -37,7 +38,7 @@ export default function ButtonAppBar() {
               MOVENU 2020
             </Typography>
           <Hidden smDown>
-          <Typography variant="subtitle1" className={classes.title}>
+          <Typography variant="subtitle1" className={classes.title} component={Link} noLinkStyle href="about" color="inherit">
             Quienes Somos
           </Typography>
           </Hidden>
@@ -47,8 +48,8 @@ export default function ButtonAppBar() {
           </Typography>
           </Hidden>
           <Hidden smDown>
-          <Typography variant="subtitle1" className={classes.title}>
-            Comites
+          <Typography variant="subtitle1" className={classes.title} component={Link} noLinkStyle href="comites" color="inherit">
+            Comite
           </Typography>
           </Hidden>
           <Hidden smDown>
