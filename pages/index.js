@@ -11,11 +11,9 @@ export default function Index() {
   return (
     <HomeLayout>
       <Container maxWidth="xl" >
-
         <About />
         <Conference/>
         <Carousel/>
-
       </Container>
     </HomeLayout>
   );
