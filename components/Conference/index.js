@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(6.6),
+    padding: theme.spacing(5),
     textAlign: 'center',
     color: theme.palette.text.secondary,
 
@@ -24,7 +24,7 @@ export default function Conference() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} padding={5} direction="row-reverse">
 
         <Grid item xs={12} sm={6}>
           <ConferenceCard />

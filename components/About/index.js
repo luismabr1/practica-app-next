@@ -24,7 +24,7 @@ export default function FullWidthGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3} padding={5}>
+      <Grid container spacing={3} padding={5} direction="row-reverse">
 
         <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>
