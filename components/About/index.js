@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(5),
-    textAlign: 'center',
+    padding: theme.spacing(3),
+    textAlign: 'left',
     color: theme.palette.text.secondary,
 
   },
@@ -28,6 +28,9 @@ export default function FullWidthGrid() {
 
         <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>
+                <Typography variant="h2" component="h2">
+                  h1. Heading
+                </Typography>
                 <Typography color="inherit" variant="body1">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi enim voluptatem harum ipsa itaque dicta. Qui magni, reprehenderit eveniet, unde eos aspernatur adipisci porro pariatur, libero deleniti facilis repellat. ipsum, dolor sit amet consectetur adipisicing elit. Sunt nihil pariatur modi accusamus suscipit? In consectetur eius, molestiae facere adipisci, recusandae non ipsam dolorem eum ullam, consequatur nisi nemo impedit. ipsum dolor sit amet consectetur adipisicing elit. Praesentium tenetur dolor sunt reiciendis, veniam veritatis debitis provident cupiditate architecto odio obcaecati inventore itaque, assumenda aperiam consequuntur minus, fuga dicta at? ipsum dolor sit amet, consectetur adipisicing elit.
                 </Typography>
