@@ -7,7 +7,7 @@ export default function Copyright() {
     <Typography variant="body2" color="inherit" align="center">
       {'Copyright © '}
       <MuiLink color="inherit" href="https://material-ui.com/">
-        Your Website
+        Movenu internacional
       </MuiLink>{' '}
       {new Date().getFullYear()}.
     </Typography>
