@@ -7,9 +7,6 @@ export default function Index() {
   return (
     <HomeLayout>
       <Container maxWidth="xl" >
-
-
-
       </Container>
     </HomeLayout>
   );

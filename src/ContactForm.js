@@ -5,6 +5,8 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import FilledInput from '@material-ui/core/FilledInput';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -17,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
   },
+  main:{
+    width: '50%',
+    alignSelf: 'center'
+  }
 }));
 
 const Formulario = () => {
@@ -94,54 +100,53 @@ const Formulario = () => {
   };
   const classes = useStyles();
   return (
-    <main>
+
+      <Paper elevation={5} style={{ padding: 16 }} className={classes.main}>
       <h1>Contactanos!</h1>
       <hr />
       <form onSubmit={handleOnSubmit}>
-      <FormControl variant="filled">
-        <InputLabel htmlFor="name">Name</InputLabel>
-        <FilledInput id="name" value={inputs.name} onChange={handleOnChange} />
-      </FormControl>
+        <Grid container alignItems="flex-start" spacing={5}>
+        <Grid item xs={3}>
+          <FormControl variant="filled">
+            <InputLabel htmlFor="name">Name</InputLabel>
+            <FilledInput id="name" value={inputs.name} onChange={handleOnChange} />
+          </FormControl>
+        </Grid>
 
-      <FormControl variant="filled">
-        <InputLabel htmlFor="email">Email</InputLabel>
-        <FilledInput id="email" value={inputs.email} onChange={handleOnChange} />
-      </FormControl>
+        <Grid item xs={4}>
+          <FormControl variant="filled" fullWidth>
+            <InputLabel htmlFor="email">Email</InputLabel>
+            <FilledInput id="email" value={inputs.email} onChange={handleOnChange}/>
+          </FormControl>
+        </Grid>
 
-      <FormControl variant="filled">
-        <InputLabel htmlFor="message">Mensaje</InputLabel>
-        <FilledInput id="message" value={inputs.message} onChange={handleOnChange} />
-      </FormControl>
+        <Grid item xs={12}>
+          <FormControl variant="filled" fullWidth>
+            <InputLabel htmlFor="message">Mensaje</InputLabel>
+            <FilledInput id="message" value={inputs.message} onChange={handleOnChange} />
+          </FormControl>
+        </Grid>
 
+        <Grid item xs={12}>
+          <Button
+              variant="contained"
+              color="primary"
+              className={classes.button}
+              type="submit"
+              disabled={status.submitting}
+            >
+                {!status.submitting
+                  ? !status.submitted
+                    ? 'Submit'
+                    : 'Submitted!'
+                  : 'Submitting...'}
+          </Button>
+        </Grid>
 
-      <Button
-        variant="contained"
-        color="primary"
-        className={classes.button}
-        type="submit"
-        disabled={status.submitting}
-      >
-          {!status.submitting
-            ? !status.submitted
-              ? 'Submit'
-              : 'Submitted'
-            : 'Submitting...'}
-      </Button>
-
-
+          
+        </Grid>
       </form>
-      {/* {status.info.error && (
-        <div className="error">Error: {status.info.msg}</div>
-      )}
-      {!status.info.error && status.info.msg &&
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-      <Alert onClose={handleClose} severity="success">
-                {status.info.msg}
-      </Alert>
-    </Snackbar>
-          <AlertBar open msg= /> */}
-      
-    </main>
+    </Paper>
   )
 }
 
