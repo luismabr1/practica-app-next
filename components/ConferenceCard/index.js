@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
         opacity: 0,
       },
       '& $imageTitle': {
+        padding: 5,
         border: '4px solid currentColor',
       },
     },
@@ -72,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageTitle: {
     position: 'relative',
-    padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
+    padding: `${theme.spacing(3)}px ${theme.spacing(5)}px ${theme.spacing(2) + 6}px`,
     textDecoration: "none"
   },
   imageMarked: {
@@ -80,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
     width: 18,
     backgroundColor: theme.palette.common.white,
     position: 'absolute',
-    bottom: -2,
+    bottom: -4,
     left: 'calc(50% - 9px)',
     transition: theme.transitions.create('opacity'),
   },

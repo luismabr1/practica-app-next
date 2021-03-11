@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
         opacity: 0,
       },
       '& $imageTitle': {
+        padding: 5,
         border: '4px solid currentColor',
       },
     },
@@ -80,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
     width: 18,
     backgroundColor: theme.palette.common.white,
     position: 'absolute',
-    bottom: -2,
+    bottom: -4,
     left: 'calc(50% - 9px)',
     transition: theme.transitions.create('opacity'),
   },

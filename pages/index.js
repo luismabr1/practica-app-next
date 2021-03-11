@@ -5,6 +5,7 @@ import About from '../components/About'
 import Conference from '../components/Conference'
 import Carousel from '../components/Carousel'
 import Comite from '../components/Comite'
+import ContactForm from '../src/ContactForm'
 
 
 
@@ -16,6 +17,7 @@ export default function Index() {
         <Conference/>
         <Comite />
         <Carousel/>
+        <ContactForm />
       </Container>
     </HomeLayout>
   );
